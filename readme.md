@@ -1,4 +1,4 @@
 ## Simple Blog using Laravel PHP Framework
 
-[![Simple Blog](https://travis-ci.org/laravel/framework.svg)]
-[![Cao Phước Danh](https://poser.pugx.org/laravel/framework/downloads.svg)](http://danhcp.name.vn)
+[![Simple Blog]]
+[![Cao Phước Danh]](http://danhcp.name.vn)
