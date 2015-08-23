@@ -1,11 +1,16 @@
 <?php namespace App\Http\Controllers;
 
+use App\Category;
+use App\Article;
+
 class HomeController extends Controller {
 
 
 	public function index()
 	{
-		return view('home');
+		$categories = Category::all();
+		$articles = Article::all();
+		return view('home')->with('categories',$categories)->with('articles',$articles);
 	}
 
 }

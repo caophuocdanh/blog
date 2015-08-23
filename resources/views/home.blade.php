@@ -110,11 +110,9 @@
 							<h3 class="panel-title">Danh Mục</h3>
 						</div>
 						<ul class="list-group">
-								<li class="list-group-item">Cras justo odio <span class="badge">42</span></li>
-								<li class="list-group-item">Dapibus ac facilisis in <span class="badge">42</span></li>
-								<li class="list-group-item">Morbi leo risus <span class="badge">42</span></li>
-								<li class="list-group-item">Porta ac consectetur ac <span class="badge">42</span></li>
-								<li class="list-group-item">Vestibulum at eros <span class="badge">42</span></li>
+							@foreach($categories as $item)
+								<li class="list-group-item"><a  href="#">{{ $item->title }}</a></li>
+							@endforeach
 							</ul>
 					</div>
 					<div class="panel panel-primary">
@@ -138,66 +136,13 @@
 				<div class="col-right col-sm-7 col-md-9">
 					<!-- div.col-md-6*15>(h3>lorem8)+(p>lorem35)+a[href="#$$"]{readmore} -->
 					<div class="articles">
+						@foreach($articles as $item)
 						<div class="col-md-6">
-							<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta culpa impedit consequatur aliquid itaque totam, sapiente iste facilis. Totam expedita perferendis eveniet! Nostrum mollitia quod quas unde alias similique facilis, quia, assumenda expedita deleniti numquam!</p>
-							<a href="#01">readmore</a>
+							<h3>{{ $item->title }}</h3>
+							<p>{{ str_limit($item->content, $limit = 200, $end = '...') }}</p>
+							<p><a class="pull-right" href="#12">readmore <span class="glyphicon glyphicon-hand-left"></span></a></p>
 						</div>
-						<div class="col-md-6">
-							<h3>Temporibus facere eveniet a tenetur, quidem tempora aliquam!</h3>
-							<p>Vero qui facilis eos, provident labore, totam, eius deserunt voluptates iusto, placeat fugiat dolore culpa cum voluptatibus veritatis repellendus ratione vitae assumenda! In molestiae atque commodi ipsam totam libero eos labore modi. Voluptatem, id suscipit.</p>
-							<a href="#02">readmore</a>
-						</div>
-						<div class="col-md-6">
-							<h3>Iste autem eveniet accusamus ea omnis adipisci nulla.</h3>
-							<p>Ad atque est dolores vel dolor tempore. Nam labore voluptatibus repellat impedit, quidem optio ut eius est culpa temporibus repellendus, libero fugiat quos! Natus suscipit tempora unde porro at corporis aliquid voluptatem tenetur dolor, est.</p>
-							<a href="#03">readmore</a>
-						</div>
-						<div class="col-md-6">
-							<h3>Repellat eum laudantium doloremque expedita reprehenderit sapiente, in.</h3>
-							<p>Dolore asperiores ut maiores. Fuga quam libero mollitia quos, enim provident, sed iure nemo incidunt numquam dolore iste est! Odit quam commodi libero dicta, quo veritatis, maiores consectetur est omnis, dolorem animi ipsam eligendi eaque.</p>
-							<a href="#04">readmore</a>
-						</div>
-						<div class="col-md-6">
-							<h3>Nihil voluptate, ducimus repellat quia ipsam inventore eaque?</h3>
-							<p>Aliquid accusamus vitae laborum quidem id deleniti a tenetur minima reprehenderit dolore aut accusantium, velit commodi, nihil dicta dolorum ullam. Culpa dolorum consectetur ducimus, sed praesentium, suscipit in totam repellendus voluptatibus impedit. Id nam, aperiam?</p>
-							<a href="#05">readmore</a>
-						</div>
-						<div class="col-md-6">
-							<h3>Consequatur, quidem fugiat fuga tempora dicta explicabo ratione!</h3>
-							<p>Illum aliquid voluptatum rerum ut nesciunt aut doloremque impedit veritatis obcaecati, aspernatur nulla eveniet ab dolores ad animi ratione autem vel nihil eos accusamus debitis corporis! Omnis ab nemo molestiae unde delectus, similique inventore vero.</p>
-							<a href="#06">readmore</a>
-						</div>
-						<div class="col-md-6">
-							<h3>Dolor vitae, in iure incidunt eveniet ab nam.</h3>
-							<p>Nam aliquam, ipsum rem ratione blanditiis quia, ullam iure accusantium voluptas ipsam sunt. Est eveniet officiis, corporis vel, officia sint veniam, quaerat fuga atque error aliquid. Impedit odit eligendi reprehenderit accusantium possimus quia totam, ut.</p>
-							<a href="#07">readmore</a>
-						</div>
-						<div class="col-md-6">
-							<h3>Accusantium, laboriosam rem harum nulla dolor perspiciatis, eius.</h3>
-							<p>Iusto cum aut vero esse omnis temporibus eveniet culpa ex neque distinctio eos officia ratione delectus est modi quisquam, natus beatae hic inventore reiciendis! Dolore quasi numquam ab error pariatur dolores minus repudiandae! Ullam, fugit.</p>
-							<a href="#08">readmore</a>
-						</div>
-						<div class="col-md-6">
-							<h3>Id aliquam quasi atque, commodi exercitationem minima ullam!</h3>
-							<p>Consectetur provident possimus nostrum illum assumenda molestias, reprehenderit veritatis, ea ad doloribus corrupti vel odio voluptatem nemo natus quos explicabo ipsam illo hic ut magni blanditiis? Adipisci optio deleniti nobis obcaecati explicabo eum ullam! Officia!</p>
-							<a href="#09">readmore</a>
-						</div>
-						<div class="col-md-6">
-							<h3>Voluptates officia aut fugit qui dolores, sit laboriosam.</h3>
-							<p>Magnam laudantium molestiae magni id alias veniam, ea iste iure repellendus non officia, velit sit quo accusamus ratione saepe excepturi perferendis. Minus quae nobis labore error molestias aliquam similique doloremque cum. Aspernatur eum, quae cupiditate.</p>
-							<a href="#10">readmore</a>
-						</div>
-						<div class="col-md-6">
-							<h3>Optio tempora ab rerum, quidem distinctio quod libero.</h3>
-							<p>Nobis nihil dignissimos cupiditate animi suscipit nesciunt autem, vero, fugit nostrum sint quasi ipsa corporis explicabo aliquam totam cumque ab porro vitae, repudiandae aperiam officia excepturi. Nesciunt, est! Delectus quo, eveniet voluptatem doloribus aliquid iusto!</p>
-							<a href="#11">readmore</a>
-						</div>
-						<div class="col-md-6">
-							<h3>Omnis ipsum quia dolore magni rerum commodi neque?</h3>
-							<p>Ullam, molestiae iusto assumenda voluptates doloribus quo et odit, officiis quidem soluta quod voluptate veniam! Earum alias est aliquid eligendi minus recusandae voluptatum nobis, cum saepe aut consectetur, accusamus adipisci accusantium perferendis, expedita deleniti doloremque.</p>
-							<a href="#12">readmore</a>
-						</div>
+						@endforeach
 					</div>
 					<nav>
 						<ul class="pagination pagination-sm pull-right">
