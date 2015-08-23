@@ -138,9 +138,13 @@
 					<div class="articles">
 						@foreach($articles as $item)
 						<div class="col-md-6">
-							<h3>{{ $item->title }}</h3>
-							<p>{{ str_limit($item->content, $limit = 200, $end = '...') }}</p>
-							<p><a class="pull-right" href="#12">readmore <span class="glyphicon glyphicon-hand-left"></span></a></p>
+							<h4><a href="#">{{ $item->title }}</a></h4>
+							<div class="clearfix">
+								<img src="images/image.jpg" alt="" class="pull-left">
+								<p>{{ str_limit($item->content, $limit = 200, $end = '...') }}</p>
+							</div>
+							<p class="clearfix"><a class="pull-right" href="#">read more <span class="glyphicon glyphicon-hand-right"></span></a></p>
+							<hr>
 						</div>
 						@endforeach
 					</div>
